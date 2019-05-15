@@ -1,0 +1,28 @@
+{
+  "name": "raf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test",
+    "build": "export NODE_ENV=development && rm -rf lib && babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.4",
+    "redux": "4.0.1",
+    "redux-first-routing": "0.3.0",
+    "universal-router": "^8.2.0"
+  }
+}
