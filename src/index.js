@@ -13,15 +13,44 @@ import Router from './router/Router';
 import Link from './components/Link';
 import Renderer from './renderer/Renderer';
 import withServices from './components/withServices';
+import {createApplication} from './boot';
+
+import Container, {ctor, value, factory, DiliteError} from './dilite/Dilite';
 
 
 export {
-  Application
+  Application,
+  createApplication,
+
+  Link,
+  withServices,
+
+  createAction,
+  handleActions,
+  createFetchDuck,
+  createDuck,
+  sideEffects,
+  Store,
+
+  push as goto,
+  goBack,
+  goForward,
+  Router,
 }
+
+export const dilite = {
+  DiliteError,
+  Container,
+  ctor,
+  value,
+  factory
+};
 
 export const components = {
   Link,
-  withServices
+  withServices,
+
+
 };
 
 export const ContainerContext = Renderer.ContainerContext;

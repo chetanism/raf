@@ -7,14 +7,15 @@ class Application {
   }
 
   start() {
-    this.store.start(this.update);
+    // this.store.start(this.update);
     this.router.start();
+    this.renderer.start();
     this.sideEffect.triggerBoot(this.store);
     console.log('Application Started!');
   }
 
-  update = () => this.renderer.render()
-    .catch(error => console.log(error));
+  // update = () => this.renderer.render()
+  //   .catch(error => console.log(error));
 
 }
 

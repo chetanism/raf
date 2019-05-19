@@ -2,7 +2,7 @@ import UniversalRouter from 'universal-router';
 import generateUrls from 'universal-router/generateUrls';
 import middleware, {history} from './reduxMiddleware';
 
-import {routerReducer, startListener, push} from 'redux-first-routing';
+import {routerReducer, startListener, push, goBack} from 'redux-first-routing';
 
 
 class Router {
@@ -51,6 +51,14 @@ class Router {
 
   setLocation(url) {
     this.store.dispatch(push(url));
+  }
+
+  setRoute(name, params = {}) {
+    this.setLocation(this.getUrl(name, params));
+  }
+
+  goBack() {
+    this.store.dispatch(goBack());
   }
 }
 

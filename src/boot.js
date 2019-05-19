@@ -34,9 +34,9 @@ const config = {
   ),
 
   renderer: factory(
-    (store, router, container) => new Renderer(
-      store, router, document.getElementById('root'), container),
-    ['store', 'router', 'container']
+    (store, router, container, RootComponent) => new Renderer(
+      store, router, document.getElementById('root'), container, RootComponent),
+    ['store', 'router', 'container', 'rootComponent']
   )
 };
 

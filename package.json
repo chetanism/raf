@@ -1,5 +1,5 @@
 {
-  "name": "raf",
+  "name": "reaf",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -15,9 +15,7 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "@babel/preset-react": "^7.0.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",

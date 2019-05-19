@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 
 class Renderer {
 
-  constructor(store, router, element, container) {
+  constructor(store, router, element, container, RootComponent) {
     this.currentRouterState = null;
     this.router = router;
     this.element = element;
     this.store = store;
     this.container = container;
+    this.RootComponent = RootComponent;
+  }
+
+  start() {
+    this.store.subscribe(this.render.bind(this));
   }
 
   async render() {
@@ -24,7 +29,9 @@ class Renderer {
       ReactDOM.render(
         (
           <Renderer.ContainerContext.Provider value={this.container}>
-            {page.component}
+            <this.RootComponent>
+              {page.component}
+            </this.RootComponent>
           </Renderer.ContainerContext.Provider>
         ),
         this.element,
